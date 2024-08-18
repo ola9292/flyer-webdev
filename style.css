@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #283c86, #45a247);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.flyer {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    text-align: center;
+    animation: slide-in-up 1s ease-out forwards;
+}
+
+.header-image {
+    width: 70%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fade-in 1.5s ease-in-out forwards;
+}
+
+header h1, header h2 {
+    color: #333;
+    opacity: 0;
+    animation: fade-in 1s ease-in-out forwards;
+}
+
+header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    animation-delay: 0.5s;
+}
+
+header h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    animation-delay: 1s;
+}
+
+.content p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    transform: translateX(-100%);
+    opacity: 0;
+    animation: slide-in 1s ease-out forwards;
+    animation-delay: 1.5s;
+}
+
+.content ul {
+    list-style: none;
+    padding: 0;
+    opacity: 0;
+    animation: fade-in 1s ease-in-out forwards;
+    animation-delay: 2s;
+}
+
+.content ul li {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.cta button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    animation: bounce-in 1s ease forwards;
+    animation-delay: 2.5s;
+}
+
+.cta button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+footer p {
+    font-size: 14px;
+    color: #aaa;
+    margin-top: 20px;
+}
+
+@keyframes fade-in {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-up {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce-in {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
